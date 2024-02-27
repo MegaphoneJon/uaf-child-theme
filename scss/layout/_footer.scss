@@ -1,0 +1,182 @@
+footer {
+  .footer {
+    &__col--sm {
+      background: var(--yellow);
+    }
+
+    &__logo {
+      border-bottom: none !important;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 62px 42px;
+      picture {
+        width: 100%;
+      }
+      img {
+        height: auto !important;
+        width: 100% !important;
+      }
+      &--tablet {
+        background: var(--yellow);
+        flex-direction: column;
+        padding: 25px 10px;
+        justify-content: space-around;
+        .footer__tribute {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__tribute {
+      margin-top: 50px;
+    }
+
+    &__uaf-logo {
+      background: url(../img/UAF-logo.png) no-repeat center;
+      height: 100px;
+      width: 100px;
+      background-size: contain;
+      margin-top: 10px;
+    }
+
+    &__form {
+      background-color: var(--black);
+      color: var(--bright);
+      .subscription-form__submit {
+        -webkit-text-fill-color: var(--bright);
+
+        &-group:after {
+          background: url(../img/btn-right-arrow_white.svg) 50% no-repeat;
+        }
+      }
+    }
+
+    &__content {
+      background-color: var(--black);
+      color: var(--bright);
+    }
+
+    &__nav {
+      ul {
+        .menu-item {
+            margin-bottom: 16px;
+          a {
+            color: var(--bright);
+            font-size: 16px;
+            line-height: 1;
+            font-weight: bold;
+            margin-bottom: 16px;
+          }
+          &:hover {
+            a {
+              color: var(--yellow);
+            }
+          }
+        }
+      }
+    }
+    &__socials {
+        .site-socials {
+            margin-left: 0;
+            h4 {
+                font-size: 16px;
+                font-weight: normal;
+            }
+            &__list-item {
+                a {
+                    color: var(--bright);
+                }
+                svg {
+                  overflow: visible;
+                    path {
+                        fill: var(--bright);
+                        &#threads {
+                          transform: translate(-16.5px, -16px);
+                        }
+                    }
+                }
+                &:hover {
+                    a {
+                        color: var(--yellow);
+                    }
+                    svg {
+                        path {
+                            fill: var(--yellow);
+                            transform: translateX(-10px);
+                            &#threads {
+                              transform: translate(-26.5px, -16px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__legal {
+        background-color: var(--black);
+        padding: 10px 42px;
+        .legal-navigation {
+            a {
+                color: var(--bright);
+                border-bottom: 1px solid var(--bright);
+                &:hover {
+                    color: var(--yellow);
+                    opacity: 1;
+                    border-color: var(--yellow);
+                }
+            }
+        }
+    }
+    &__copyright {
+        color: var(--bright);
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  footer {
+    .footer {
+      &__col--lg {
+      
+      }
+      &__logo {
+        &--tablet {
+          display: flex;
+          align-items: center;
+       
+        }
+      }
+      &__form {
+    
+      }
+      &__content {
+     flex-direction: row;
+     justify-content: center;
+     padding: 0px 30px 20px;
+      }
+      &__nav {
+        flex: 0 1 45%;
+      }
+      &__socials {
+        width: auto;
+        flex: 0 1 45%;
+        .site-socials {
+        display: block;
+        
+        }
+      }
+    
+    &__legal {
+      text-align: center;
+      .legal__nav {
+        .legal-navigation {
+          .menu {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  }
+}

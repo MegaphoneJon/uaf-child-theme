@@ -1,0 +1,45 @@
+{
+    "key": "group_64fe127296f9e",
+    "title": "Posts Block - CTA Overwrite",
+    "fields": [
+        {
+            "key": "field_64fe129bba75b",
+            "label": "CTA title",
+            "name": "cta_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "This will overwrite the default 'Discover more' link title used when this posts appears in the 'Posts Block'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Discover more",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1708630052
+}

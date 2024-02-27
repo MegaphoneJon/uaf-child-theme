@@ -1,0 +1,14 @@
+.single-color-block {
+    .container {
+        padding: 35px 0 100px;
+        display: flex;
+        justify-content: center;
+        .single-color-block {
+            &__inner {
+                width: 80%;
+                max-width: 900px;
+                padding: 35px 45px
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+body.privacy-policy,
+body.page-accessibility-statement {
+    .hero-text-block {
+    a {
+        border-bottom: 1px solid var(--orange);
+        text-decoration: none;
+        span {
+            color: var(--orange);
+        }
+        &:hover {
+            border-color: #0000FF;
+            span {
+                color: #0000FF;
+            }
+        }
+    }
+}
+}

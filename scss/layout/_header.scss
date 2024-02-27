@@ -1,0 +1,107 @@
+.site-header {
+  &.is--visible {
+    background: var(--black);
+
+    .top-line {
+      &--left {
+        width: 100%;
+        justify-content: space-between;
+        .header__logo {
+          width: 20%;
+          align-items: center;
+          .logo--desk {
+            width: 267px;
+            height: 58px;
+            display: block;
+          }
+        }
+        .header-navigation {
+          ul {
+            li {
+              a {
+                color: var(--white);
+                font-size: 18px;
+                line-height: 1.2;
+                font-weight: 700;
+                &:hover {
+                  color: var(--yellow);
+    
+                  
+                }
+              }
+              &.menu-item:hover {
+                border-color: var(--yellow);
+              }
+            }
+            li.menu-item-has-children > a:first-child::after {
+              content: "";
+              background-image: url(../img/down-arrow-white.svg);
+              height: 18px;
+              width: 18px;
+            }
+            li.menu-item-has-children:hover > a:first-child::after,
+            li.menu-item-has-children[aria-expanded="true"] > a:first-child::after {
+              transform: translateX(10px);
+              background-image: url(../img/down-arrow-yellow.svg);
+            }
+            .sub-menu {
+              flex-direction: column;
+              gap: 5px;
+              cursor: pointer;
+              li {
+                a{
+                  color: var(--yellow);
+                  &:hover {
+                    color: var(--black);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &--right {
+        .btn--hamburger {
+          span {
+            background: var(--bright);
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  &__button {
+    .btn--primary-purple {
+      &::before {
+        background: var(--black);
+        transform: skewY(-1deg);
+        top: 5px;
+      }
+      span {
+        color: var(--bright);
+      }
+    }
+  }
+  &__contacts {
+    display: none !important;
+  }
+  &__socials {
+    .site-socials {
+      &__list-item {
+        svg:has(path#threads) {
+          background: black;
+          padding: 3px;
+          border-radius: 5px;
+          width: 23px;
+          height: 23px;
+        }
+        #threads {
+          transform: translate(-16.5px, -16px);
+          fill: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+a:focus:not(:hover),
+a[aria-expanded="true"],
+:focus {
+outline: 4px outset var(--yellow);
+}
+
+a.is--active {
+    outline: none;
+}

@@ -1,0 +1,90 @@
+// Child Theme SCSS
+
+:root {
+  --green: #759985;
+  --purple: #b56fb0;
+  --yellow: #db9e38;
+  --orange: #d05c19;
+  --blue: #708fb0;
+  --white: #faf9f4;
+  --bright: #ffffff;
+  --offwhite: #FAF9F4;
+  --black: #000;
+  --grey: #555;
+}
+
+main#primary {
+  background-color: var(--bright);
+}
+
+@media (min-width: 1920px) {
+  main#primary {
+    padding-top: 110px;
+  }
+}
+
+//-------- Global Styles --------
+
+a {
+  color: var(--black);
+  text-decoration: underline;
+  &:hover,
+  &:focus {
+    color: var(--yellow);
+  }
+}
+
+
+//---------- LAYOUT ----------
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+@import "layout/accessibility.scss";
+
+//---------- Pages ----------
+@import "pages/privacy-accessibility-pages.scss";
+
+//---------- BLOCK STYLES ----------
+@import "blocks/_fawf-hero-block.scss";
+@import "blocks/_left-quote-block.scss";
+@import "blocks/fawf-text-media-block";
+@import "blocks/stories-block";
+@import "blocks/mosaic-accordion-block";
+@import "blocks/single-color-block";
+
+
+//---------- Page Adjustements ----------
+//---Solutions ----- 
+.text-block.solutions-h2 {
+  background: var(--offwhite);
+  padding-bottom: 0;
+  padding-left: 5%;
+  .container {
+    padding-left: 0;
+    .text__title {
+      margin-bottom: 0;
+    }
+    .text__inner {
+      display: none;
+    }
+  }
+}
+
+.solutions__nested-hero {
+  .hero {
+    &__inner {
+      align-items: flex-start;
+    }
+    &__accent-circle::after {
+      content: "";
+      height: 130%;
+      width: 130%;
+      border-radius: 50%;
+      background-color: #000;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      right: -90%;
+      bottom: -76%;
+    }
+  }
+}

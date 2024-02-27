@@ -1,0 +1,4 @@
+[submodule "uaf-child"]
+	path = uaf-child
+	url = https://github.com/Beagles-Designs/uaf-child.git
+	branch = master

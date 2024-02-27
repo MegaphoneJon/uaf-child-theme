@@ -1,0 +1,24 @@
+.quote-block {
+  a {
+    &:hover,
+    &:focus {
+      color: var(--white);
+    }
+  }
+  .quote__image-caption {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .quote-block.left-quote.layout--image {
+    .quote__inner {
+      margin-left: 95px;
+      margin-right: auto;
+      &::before {
+        left: -38px;
+        right: unset;
+      }
+    }
+  }
+}

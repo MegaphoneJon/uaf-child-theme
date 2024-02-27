@@ -1,0 +1,419 @@
+{
+    "key": "group_65c94b5da8d14",
+    "title": "Block: FAWF Hero",
+    "fields": [
+        {
+            "key": "field_65c94b5dba656",
+            "label": "Hero type",
+            "name": "hero_type",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "main-hero": "Homepage hero",
+                "page-banner": "Page Banner",
+                "nested-hero": "Nested Hero"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_65caa6ad04ffd",
+            "label": "Background Color",
+            "name": "bg_color",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yellow": "<div style=\"background-color: #DB9E38; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>Yellow",
+                "offwhite": "<div style=\"border: 1px solid grey; background-color: #FAF9F4; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>Off-White",
+                "white": "<div style=\"border: 1px solid grey; background-color: #fafafa; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>White"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "vertical"
+        },
+        {
+            "key": "field_65cac1a6d186e",
+            "label": "Accent Circle Color",
+            "name": "circle_color",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "black": "<div style=\"background-color: #000; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>Black",
+                "yellow": "<div style=\"background-color: #DB9E38; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>yellow",
+                "orange": "<div style=\"background-color: #AD5726; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>orange",
+                "blue": "<div style=\"background-color: #708FB0; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>blue"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "vertical"
+        },
+        {
+            "key": "field_65c9736dbaafd",
+            "label": "Featured Image",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c94b5dba656",
+                        "operator": "!=",
+                        "value": "nested-hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "To change the displayed Image, update the Page or Posts' Featured Image.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65d14032477db",
+            "label": "Title Graphic",
+            "name": "title_graphic",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c94b5dba656",
+                        "operator": "==",
+                        "value": "main-hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_65ca8d5fffd4a",
+            "label": "image",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c94b5dba656",
+                        "operator": "==",
+                        "value": "nested-hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_65cac9fb6b20c",
+            "label": "Image Position",
+            "name": "image_position",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "center": "center",
+                "top": "Top",
+                "bottom": "Bottom",
+                "top right": "Top Right",
+                "top left": "Top Left",
+                "bottom right": "Bottom Right",
+                "bottom left": "Bottom Left"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_65cacad36b20d",
+            "label": "Image Size",
+            "name": "image_size",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 0,
+            "max": 200,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65c94b5dba6bd",
+            "label": "Subtitle",
+            "name": "subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c94b5dba656",
+                        "operator": "==",
+                        "value": "main-hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65c94b5dba6d6",
+            "label": "Primary button",
+            "name": "primary_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_65c94b5dba6df",
+            "label": "Secondary button",
+            "name": "secondary_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c94b5dba656",
+                        "operator": "==",
+                        "value": "main-hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_65c94b5dba6af",
+            "label": "Title",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c94b5dba656",
+                        "operator": "==",
+                        "value": "page-banner"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This block will display the Page Title when set to 'Secondary Hero' and used as a Page Banner.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65c94b5dba6ca",
+            "label": "Copy",
+            "name": "copy",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c94b5dba656",
+                        "operator": "==",
+                        "value": "page-banner"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_65ca8c7b394b1",
+            "label": "Paragraph 1",
+            "name": "paragraph_1",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c94b5dba656",
+                        "operator": "==",
+                        "value": "nested-hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_65ca8cb2394b2",
+            "label": "Paragraph 2",
+            "name": "paragraph_2",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c94b5dba656",
+                        "operator": "==",
+                        "value": "nested-hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/fawf-hero-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1708472460
+}

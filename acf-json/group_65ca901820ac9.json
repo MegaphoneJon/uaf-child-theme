@@ -1,0 +1,222 @@
+{
+    "key": "group_65ca901820ac9",
+    "title": "Block: Mosaic Accordion",
+    "fields": [
+        {
+            "key": "field_65ca9018307e9",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_65ca9018307f1",
+            "label": "Title mobile",
+            "name": "title_mobile",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_65ca90183080d",
+            "label": "Subtitle",
+            "name": "subtitle",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_65ca901830829",
+            "label": "Accordion Items",
+            "name": "accordion_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65ca90183845f",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65ca901830829"
+                },
+                {
+                    "key": "field_65ca90183847a",
+                    "label": "Copy",
+                    "name": "copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_65ca901830829"
+                },
+                {
+                    "key": "field_65ca91393f05f",
+                    "label": "Mosaic Copy",
+                    "name": "mosaic_copy",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_65cc1cb0cb58d",
+                            "label": "Block Color",
+                            "name": "block_color",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yellow": "<div style=\"background-color: #DB9E38; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>Yellow",
+                                "light-yellow": "<div style=\"border: 1px solid grey; background-color: #DB9E38; opacity: 60%; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>Light Yellow",
+                                "blue": "<div style=\"border: 1px solid grey; background-color: #708FB0; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>Blue",
+                                "light-blue": "<div style=\"border: 1px solid grey; background-color: #708FB0; opacity: 60%; width:20px; height: 20px; border-radius: 50%; float: left;margin-right: 5px;\"><\/div>Light Blue"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "layout": "horizontal",
+                            "parent_repeater": "field_65ca91393f05f"
+                        },
+                        {
+                            "key": "field_65ca92643f061",
+                            "label": "Block Content",
+                            "name": "block_content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "parent_repeater": "field_65ca91393f05f"
+                        }
+                    ],
+                    "parent_repeater": "field_65ca901830829"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/mosaic-accordion-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1708472488
+}
