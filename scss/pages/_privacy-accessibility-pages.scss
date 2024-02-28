@@ -1,18 +1,42 @@
 body.privacy-policy,
 body.page-accessibility-statement {
-    .hero-text-block {
+  .hero-text-block {
     a {
-        border-bottom: 1px solid var(--orange);
-        text-decoration: none;
+      border-bottom: 1px solid var(--orange);
+      text-decoration: none;
+      span {
+        color: var(--orange);
+      }
+      &:hover {
+        border-color: #0000ff;
         span {
-            color: var(--orange);
+          color: #0000ff;
         }
-        &:hover {
-            border-color: #0000FF;
-            span {
-                color: #0000FF;
-            }
+      }
+    }
+    
+  }
+  .hero-text--yellow {
+    .hero-text__title {
+        strong{
+            position: relative;
+            z-index: 1;
+        &:before {
+            background-color: var(--yellow);
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            height: 100%;
+            z-index: -1;
+           
+            background-size: 100%;
+            width: calc(100% + 12px);
+            height: calc(100% + 2px);
+            left: -7px;
+            top: 1px;
         }
+    }
     }
 }
 }

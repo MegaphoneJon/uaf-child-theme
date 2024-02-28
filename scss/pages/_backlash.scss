@@ -1,0 +1,26 @@
+body.page-backlash {
+    section.text-block {
+        .container {
+        padding-left: 5%;
+        padding-right: 5%;
+        .text {
+            &__inner {
+                width: 100%;
+                max-width: unset;
+                grid-column-gap: 0;
+                grid-template-columns: 1fr;
+            }
+            &__title {
+                max-width: 60%;
+            }
+            &__col:first-child {
+                max-width: 60%;
+               
+            }
+            &__col:nth-child(2){
+                display: none;
+            }
+        }
+        }
+    }
+}

@@ -105,3 +105,21 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  header.site-header {
+    .container {
+      .top-line {
+        .header{
+          &__logo {
+            width: 40vw;
+            .logo--desk{
+    width: 100%;
+    height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

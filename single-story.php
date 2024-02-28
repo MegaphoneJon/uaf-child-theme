@@ -17,7 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 	<?php if (!is_front_page() && !is_search() && !is_404()) { 
-			_get_template_part('templates/components/_breadcrumbs');
+			_get_template_part('../uaf-child/templates/components/_stories-breadcrumbs');
 		 } ?>
 		<?php
 		while ( have_posts() ) :

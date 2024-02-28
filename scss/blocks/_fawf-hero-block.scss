@@ -35,9 +35,9 @@
         margin-bottom: 12px;
       }
       h1 {
-        font-size: 80px;
+        font-size: 70px;
         line-height: 1;
-        font-weight: normal;
+        font-weight: bold;
 
         span.hero__splash {
           position: relative;
@@ -119,6 +119,7 @@
 
   //Layout Specific Adjustements
 
+
   &.page-banner {
     border-bottom: none;
     min-height: calc(var(--hero-img-height) + 20px);
@@ -164,6 +165,7 @@
         }
       }
       .hero__img {
+     
         .img {
           bottom: 0;
           left: unset;
@@ -179,6 +181,17 @@
 }
 
 //-----Tablet and Mobile Adjustments
+
+@media screen and (min-width: 1100px) {
+  .hero-block.nested-hero {
+    .hero {
+      &__img {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 1280px) {
   .hero {
@@ -320,6 +333,10 @@
       }
       &__copy {
         margin-bottom: 0;
+        text-align: left;
+      }
+      &__content {
+        padding-right: 0!important;
       }
     }
     h1 {
@@ -329,13 +346,18 @@
 
   .hero-block.nested-hero {
     padding-bottom: var(--hero-img-height);
+    padding-top: 0;
     .hero{
       &__inner {
         padding-bottom: 0;
+        width: 90%;
       }
       &__content {
-        padding-bottom: 0!important;
+        padding: 0!important;
 
+      }
+      &__paragraph {
+        text-align: left;
       }
       &__paragraph {
         margin-bottom: 0!important;

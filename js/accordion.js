@@ -3,28 +3,28 @@ jQuery(document).ready(function($) {
 
         const accordionLinks = document.querySelectorAll('.large-accordion__accordion-item a');
         const viewBtns = document.querySelectorAll('.accordion-item__view-btn');
+        const accordionHeaders = document.querySelectorAll('.js-accordion-item__heading');
 
         accordionLinks.forEach( link => {
             link.setAttribute('tabindex', -1);
         });
 
-        // accordionBtns.forEach(el => {
-        //     el.addEventListener('click', function() {
-        //         // Use nextElementSibling in a loop to find the correct sibling
-        //         let sibling = this.nextElementSibling;
-        //         while (sibling && !sibling.classList.contains('accordion-item__view-btn')) {
-        //             sibling = sibling.nextElementSibling;
-        //         }
+        accordionHeaders.forEach(header => {   
+            header.addEventListener('click', function() {
+                let btn = this.nextElementSibling.nextElementSibling;
+                
+                if(this.classList.contains('is--active')) {
+                    viewBtns.forEach(e => {
+                        e.innerHTML = "View Experiences";
+                    });
+                    btn.innerHTML = "Hide Experiences";
+                } else {
+                    btn.innerHTML = "View Experiences";
+                }
 
-        //         if (sibling) {
-        //             sibling.classList.toggle('is--open');
-        //             sibling.setAttribute('aria-hidden', 'false');
-        //             sibling.setAttribute('aria-expanded', 'true');
-                    
-              
-        //         }
-        //     });
-        // });
+            });
+        });
+
 
         viewBtns.forEach(el => {
             el.addEventListener('click', function() {
@@ -38,6 +38,10 @@ jQuery(document).ready(function($) {
                     sibling.click();
                     if (sibling.classList.contains('is--active')) {
                         this.classList.add('is--open');
+                        this.innerHTML = "Hide Experiences";
+                    } else {
+                        this.classList.remove('is--open');
+                        this.innerHTML = "View Experiences";
                     }
                
                 }

@@ -2,16 +2,15 @@
   --image-width: 21vw;
   width: 90%;
   margin: 0 auto;
-  padding: 110px 0;
+  padding: 55px 0;
   .text-media__copy {
     width: 45vw;
     max-width: 600px;
     p {
-      
-        font-size: 24px;
-    span {
       font-size: 24px;
-    }      
+      span {
+        font-size: 24px;
+      }
     }
   }
   &__story-grid {
@@ -21,7 +20,7 @@
     justify-content: flex-start;
     column-gap: 3%;
     row-gap: 90px;
-    margin: 71px auto 0;
+    margin: 35px auto 0;
     width: 100%;
     .story {
       flex: 0 0 31%;
@@ -34,10 +33,6 @@
       }
       &__title {
         margin: 50px 0 20px 0;
-        h2 {
-          font-size: 50px;
-          font-weight: normal;
-        }
       }
 
       &__excerpt {
@@ -55,6 +50,7 @@
         font-size: 16px;
         line-height: 1.6;
         width: fit-content;
+        font-weight: bold;
 
         &:hover {
           color: var(--yellow);
@@ -123,11 +119,11 @@
 
       &__link-title {
         font-size: 50px;
-        color: var(--bright);
+        color: var(--black);
         position: absolute;
         transform: translate(-50%, -50%);
         text-decoration: none;
-        font-weight: normal;
+        font-weight: bold;
         top: 50%;
         left: 39%;
         z-index: 10;
@@ -135,6 +131,9 @@
       }
 
       &:nth-child(even) {
+        .story__link-title {
+          color: var(--bright);
+        }
         .story__link::before {
           background: var(--orange);
         }
@@ -152,6 +151,10 @@
       .story {
         &__content {
           display: none;
+        }
+        &__title {
+          text-align: center;
+          margin-right: 89px;
         }
       }
     }
@@ -183,15 +186,6 @@
         display: block;
       }
     }
-    &__story-grid {
-      .story {
-        &__title {
-          h2 {
-            font-size: clamp(22px, 4.4vw, 50px);
-          }
-        }
-      }
-    }
   }
 }
 
@@ -207,7 +201,20 @@
         }
       }
     }
+  
+  &.overview {
+    .stories {
+      &__story-grid {
+        .story {
+          &__title {
+            margin-right: 64px;
+          }
+        }
+      }
+    }
+
   }
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -223,9 +230,6 @@
             flex-grow: 1;
             &__title {
               margin-top: 35px;
-              h2 {
-                font-size: 40px;
-              }
             }
             &__excerpt {
               font-size: 16px;

@@ -16,7 +16,7 @@
 
 <head>
 
-	<!-- Google tag (gtag.js) -->
+	<!-- Google tag (gtag.js)
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-C2QHEZBKYJ”"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -29,7 +29,7 @@
 	</script>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="profile" href="https://gmpg.org/xfn/11"> -->
 
 	<?php wp_head(); ?>
 </head>

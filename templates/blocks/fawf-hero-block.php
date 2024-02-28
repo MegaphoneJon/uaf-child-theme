@@ -47,14 +47,18 @@ $title_graphic = get_field('title_graphic');
                     </div>
                 <?php endif; ?> <!--- end primary btn if -->
             <?php else : ?>
-                <div class="hero__paragraph"><?php echo $paragraph_1; ?></div>
-                <div class="hero__paragraph"><?php echo $paragraph_2; ?></div>
+                <?php if ($paragraph_1) : ?>
+                    <div class="hero__paragraph"><?php echo $paragraph_1; ?></div>
+                <?php endif; ?>
+                <?php if ($paragraph_2) : ?>
+                    <div class="hero__paragraph"><?php echo $paragraph_2; ?></div>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
 
 
       <div class="hero__img">
-            <div class="img" style="background-image:url('<?php echo (($hero_type === 'main-hero') || ($hero_type === 'page-banner')) ? $featured_image_url : $image; ?>'); background-position:<?php echo $image_position; ?>; background-size:<?php echo $image_size; ?>%;" ;></div>
+            <div class="img" style="background-image:url('<?php echo (($hero_type === 'main-hero') || ($hero_type === 'page-banner')) ? $featured_image_url : $image; ?>'); background-position:<?php echo $image_position; ?>; background-size:cover;" ;></div>
             <div class="hero__accent-circle <?php echo $circle_color; ?>"></div>
          
             </div>

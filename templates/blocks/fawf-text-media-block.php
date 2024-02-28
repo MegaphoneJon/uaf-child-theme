@@ -1,4 +1,7 @@
 <?php
+
+use Civi\Api4\Action\AfformBehavior\Get;
+
 $layout = get_field('layout');
 $media_type = get_field('media_type');
 $title = get_field('title');
@@ -6,6 +9,7 @@ $copy = get_field('copy');
 $primary_btn = get_field('primary_button');
 $secondary_btn = get_field('secondary_button');
 $image = get_field('image');
+$image_size = get_field('image_size');
 $media_caption = get_field('media_caption');
 $video_source = get_field('video_source');
 $video_cover = get_field('video_cover');
@@ -16,15 +20,13 @@ $quote = get_field('quote');
 $offwhite = get_field('off-white');
 $add_block = get_field('add_block');
 $color_blocks = get_field('color_blocks');
+ if(!$image_size){ $image_size = 'medium'; }
 ?>
 
-<section class="text-media-block <?php if ($layout === 'media-quote') {
-                                        echo 'media-quote';
-                                    } ?> <?php if ($offwhite) {
-                                                                                                    echo 'offwhite-bg';
-                                                                                                } ?>">
+<section class="text-media-block <?php if (!($layout == 'media-quote')) { echo 'extended'; } ?> 
+<?php echo $layout; if ($offwhite) {   echo ' offwhite-bg';  } ?>">
     <div class="container">
-        <div class="text-media__inner <?php echo $layout; ?> <?php
+        <div class="text-media__inner  image-<?php echo $image_size; ?> <?php echo $layout; ?> <?php
                                                                 if ($has_accordion && $accordion) {
                                                                 ?> text-media__inner--accordion <?php } ?><?php if ($layout === 'media-quote') : ?>media-left <?php endif; ?>">
             <?php if ($title) { ?>
@@ -118,8 +120,10 @@ $color_blocks = get_field('color_blocks');
                 <div class="text-media__media">
                     <?php if ($media_type === 'image' && $image) {
                     ?>
-                        <div class="text-media__image">
-                            <?php _get_template_part('templates/components/_image-id', ['field' => $image, 'sizes' => 'medium']); ?>
+                   
+                        <div class="text-media__image" style="background-image: url('<?php echo $image; ?>;')">
+                            
+                         
                             <?php if ($media_caption) { ?>
                                 <div class="text-media__media-caption">
                                     <p><?php echo $media_caption; ?></p>

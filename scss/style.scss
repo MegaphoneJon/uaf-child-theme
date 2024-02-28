@@ -34,6 +34,14 @@ a {
   }
 }
 
+em::-moz-selection,h1::-moz-selection,h2::-moz-selection,h3::-moz-selection,h4::-moz-selection,h5::-moz-selection,p::-moz-selection,span::-moz-selection,strong::-moz-selection {
+  background: var(--yellow)!important;
+}
+
+em::selection,h1::selection,h2::selection,h3::selection,h4::selection,h5::selection,p::selection,span::selection,strong::selection {
+  background: var(--yellow)!important;
+}
+
 
 //---------- LAYOUT ----------
 @import "layout/_header.scss";
@@ -42,6 +50,8 @@ a {
 
 //---------- Pages ----------
 @import "pages/privacy-accessibility-pages.scss";
+@import "pages/backlash";
+@import "pages/solutions";
 
 //---------- BLOCK STYLES ----------
 @import "blocks/_fawf-hero-block.scss";
@@ -51,40 +61,3 @@ a {
 @import "blocks/mosaic-accordion-block";
 @import "blocks/single-color-block";
 
-
-//---------- Page Adjustements ----------
-//---Solutions ----- 
-.text-block.solutions-h2 {
-  background: var(--offwhite);
-  padding-bottom: 0;
-  padding-left: 5%;
-  .container {
-    padding-left: 0;
-    .text__title {
-      margin-bottom: 0;
-    }
-    .text__inner {
-      display: none;
-    }
-  }
-}
-
-.solutions__nested-hero {
-  .hero {
-    &__inner {
-      align-items: flex-start;
-    }
-    &__accent-circle::after {
-      content: "";
-      height: 130%;
-      width: 130%;
-      border-radius: 50%;
-      background-color: #000;
-      display: block;
-      position: absolute;
-      z-index: -1;
-      right: -90%;
-      bottom: -76%;
-    }
-  }
-}

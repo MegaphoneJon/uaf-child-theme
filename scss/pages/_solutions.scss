@@ -1,0 +1,111 @@
+.page-solutions {
+  .hero-text {
+    &__inner {
+      display: flex;
+      justify-content: flex-start;
+    }
+    &__copy {
+      max-width: 1300px;
+      margin: 0;
+      ul {
+        list-style-type: disc;
+        li {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.page-solutions {
+  .text-block {
+    padding-bottom: 0;
+    padding-left: 5%;
+    .container {
+      padding-left: 0;
+      .text__title {
+        margin-bottom: 0;
+      }
+      .text__inner {
+        display: none;
+      }
+    }
+  }
+}
+.page-solutions {
+  .hero-block.nested-hero {
+    background-color: var(--bright);
+    .hero {
+      &__inner {
+        align-items: flex-start;
+        .hero__content {
+          .hero__paragraph {
+            background-color: var(--offwhite);
+            margin-bottom: 0;
+            &:nth-child(2) {
+              background-color: var(--bright);
+              border: none;
+            }
+          }
+        }
+      }
+      &__img {
+        top: 0;
+        transform: unset;
+      }
+      &__accent-circle::after {
+        content: "";
+        height: 130%;
+        width: 130%;
+        border-radius: 50%;
+        background-color: #000;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        right: -90%;
+        bottom: -76%;
+      }
+    }
+    a {
+      color: var(--orange);
+      text-decoration: none;
+      border-bottom: 1px solid var(--orange);
+      &:hover {
+        color: var(--bright);
+        border-bottom: 1px solid var(--bright);
+        background: var(--orange);
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  body.page-solutions {
+    .quote-block.layout--image {
+      .quote {
+        &__inner {
+          max-width: 476px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-solutions {
+    .quote-block.layout--image {
+      .quote {
+        &__inner {
+          max-width: calc(100% - 64px);
+          &:before {
+            width: 84%;
+            height: unset;
+            aspect-ratio: 1;
+            min-width: 567px;
+          }
+        }
+      }
+    }
+  }
+}

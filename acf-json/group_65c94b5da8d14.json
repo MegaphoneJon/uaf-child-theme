@@ -198,27 +198,6 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_65cacad36b20d",
-            "label": "Image Size",
-            "name": "image_size",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": 0,
-            "max": 200,
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_65c94b5dba6bd",
             "label": "Subtitle",
             "name": "subtitle",
@@ -415,5 +394,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708472460
+    "modified": 1709009601
 }
