@@ -227,8 +227,13 @@
     .large-accordion__title {
       width: 100%;
       max-width: unset;
+      
       .title--mob {
         width: 100%;
+        display: none;
+      }
+      .title--desk {
+        display: block;
       }
     }
     .large-accordion__inner {

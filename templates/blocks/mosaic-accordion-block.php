@@ -1,6 +1,5 @@
 <?php
 $title = get_field('title');
-$title_mob = get_field('title_mobile');
 $subtitle = get_field('subtitle');
 
 $accordion_items = get_field('accordion_items'); //Repeater field
@@ -12,9 +11,6 @@ $accordion_items = get_field('accordion_items'); //Repeater field
 <section class="large-accordion-block">
     <div class="container">
         <div class="large-accordion__title">
-            <div class="title--mob">
-                <?php echo $title_mob; ?>
-            </div>
             <div class="title--desk">
                 <?php echo $title; ?>
             </div>

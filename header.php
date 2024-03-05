@@ -16,8 +16,9 @@
 
 <head>
 
-	<!-- Google tag (gtag.js)
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-C2QHEZBKYJ”"></script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-T9FDHN9T"></script>
+	
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -25,11 +26,11 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		gtag('config', 'G-C2QHEZBKYJ');
+		gtag('config', 'GTM-T9FDHN9T');
 	</script>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11"> -->
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 </head>

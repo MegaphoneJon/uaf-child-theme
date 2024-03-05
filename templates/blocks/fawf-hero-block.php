@@ -27,9 +27,9 @@ $title_graphic = get_field('title_graphic');
                 <p class="hero__subtitle"><?php echo $subtitle; ?></p>
                 <?php if ($primary_btn) : ?>
                     <div class="hero__buttons">
-                        <a href="<?php echo $primary_btn['url']; ?>" class="btn button button--dark"><?php echo $primary_btn['title']; ?></a>
+                        <a href="<?php echo $primary_btn['url']; ?>" class="btn button button--dark"><span><?php echo $primary_btn['title']; ?></span></a>
                         <?php if ($secondary_btn) : ?>
-                            <a href="<?php echo $secondary_btn['url']; ?>" class="btn btn--secondary"><?php echo $secondary_btn['title']; ?></a>
+                           <a href="<?php echo $secondary_btn['url']; ?>" class="btn btn--secondary"><span><?php echo $secondary_btn['title']; ?></span></a>
                         <?php endif; ?> <!-- end secondary btn if -->
                     </div>
                 <?php endif; ?> <!--- end primary btn if -->
@@ -40,9 +40,9 @@ $title_graphic = get_field('title_graphic');
                 <div class="hero__copy"><?php echo $copy; ?></div>
                 <?php if ($primary_btn) : ?>
                     <div class="hero__buttons">
-                        <a href="<?php echo $primary_btn['url']; ?>" class="btn button button--dark"><?php echo $primary_btn['title']; ?></a>
+                        <a href="<?php echo $primary_btn['url']; ?>" class="btn button button--dark"><span><?php echo $primary_btn['title']; ?></span></a>
                         <?php if ($secondary_btn) : ?>
-                            <a href="<?php echo $secondary_btn['url']; ?>" class="btn btn--secondary"><?php echo $secondary_btn['title']; ?></a>
+                            <a href="<?php echo $secondary_btn['url']; ?>" class="btn btn--secondary"><span><?php echo $secondary_btn['title']; ?></span></a>
                         <?php endif; ?> <!-- end secondary btn if -->
                     </div>
                 <?php endif; ?> <!--- end primary btn if -->
@@ -57,12 +57,12 @@ $title_graphic = get_field('title_graphic');
         </div>
 
 
-      <div class="hero__img">
+        <div class="hero__img">
             <div class="img" style="background-image:url('<?php echo (($hero_type === 'main-hero') || ($hero_type === 'page-banner')) ? $featured_image_url : $image; ?>'); background-position:<?php echo $image_position; ?>; background-size:cover;" ;></div>
             <div class="hero__accent-circle <?php echo $circle_color; ?>"></div>
-         
-            </div>
- 
+
+        </div>
+
 
 
     </div> <!-- End hero__inner -->

@@ -295,10 +295,10 @@
     &.hero {
       .hero {
         &__content {
-          align-items: center;
+          align-items: flex-start;
           padding-bottom: calc(var(--hero-img-height) - 80px) !important;
           margin-top: 45px;
-          text-align: center;
+          text-align: left;
           h1 {
             font-size: 15vw;
           }

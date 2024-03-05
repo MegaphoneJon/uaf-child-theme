@@ -15,7 +15,7 @@ $order_by = get_field('order_stories_by');
                 <h2 class="h2"><?php echo $title; ?></h2>
             </div>
             <div class="text-media__copy"><?php echo $description; ?></div>
-            <a href="<?php echo $primary_btn['url']; ?>" class="btn button button--dark"><?php echo $primary_btn['title']; ?></a>
+            <a href="<?php echo $primary_btn['url']; ?>" class="btn button button--dark"><span><?php echo $primary_btn['title']; ?></span></a>
 
         <?php } ?>
 
