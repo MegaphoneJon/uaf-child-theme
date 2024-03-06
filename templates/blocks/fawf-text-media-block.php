@@ -20,15 +20,22 @@ $quote = get_field('quote');
 $offwhite = get_field('off-white');
 $add_block = get_field('add_block');
 $color_blocks = get_field('color_blocks');
- if(!$image_size){ $image_size = 'medium'; }
+if (!$image_size) {
+    $image_size = 'medium';
+}
 ?>
 
-<section class="text-media-block <?php if (!($layout == 'media-quote')) { echo 'extended'; } ?> 
-<?php echo $layout; if ($offwhite) {   echo ' offwhite-bg';  } ?>">
+<section class="text-media-block <?php if (!($layout == 'media-quote')) {
+                                        echo 'extended';
+                                    } ?> 
+<?php echo $layout;
+if ($offwhite) {
+    echo ' offwhite-bg';
+} ?>">
     <div class="container">
         <div class="text-media__inner  image-<?php echo $image_size; ?> <?php echo $layout; ?> <?php
-                                                                if ($has_accordion && $accordion) {
-                                                                ?> text-media__inner--accordion <?php } ?><?php if ($layout === 'media-quote') : ?>media-left <?php endif; ?>">
+                                                                                                if ($has_accordion && $accordion) {
+                                                                                                ?> text-media__inner--accordion <?php } ?><?php if ($layout === 'media-quote') : ?>media-left <?php endif; ?>">
             <?php if ($title) { ?>
                 <div class="text-media__title text-media__title--mob">
                     <h2 class="h2"><?php echo esc_html($title); ?></h2>
@@ -120,16 +127,14 @@ $color_blocks = get_field('color_blocks');
                 <div class="text-media__media">
                     <?php if ($media_type === 'image' && $image) {
                     ?>
-                   
+
                         <div class="text-media__image" style="background-image: url('<?php echo $image; ?>;')">
-                            
-                         
-                            <?php if ($media_caption) { ?>
-                                <div class="text-media__media-caption">
-                                    <p><?php echo $media_caption; ?></p>
-                                </div>
-                            <?php } ?>
                         </div>
+                        <?php if ($media_caption) { ?>
+                            <div class="text-media__media-caption">
+                                <p><?php echo $media_caption; ?></p>
+                            </div>
+                        <?php } ?>
                     <?php
                     } ?>
                     <?php if ($media_type === 'video') {
