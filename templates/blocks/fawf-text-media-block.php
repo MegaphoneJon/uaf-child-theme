@@ -128,7 +128,7 @@ if ($offwhite) {
                     <?php if ($media_type === 'image' && $image) {
                     ?>
 
-                        <div class="text-media__image" style="background-image: url('<?php echo $image; ?>;')">
+                        <div class="text-media__image" style="background-image: url('<?php echo $image; ?>')">
                         </div>
                         <?php if ($media_caption) { ?>
                             <div class="text-media__media-caption">
