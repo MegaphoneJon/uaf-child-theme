@@ -14,6 +14,7 @@ $paragraph_2 = get_field('paragraph_2');
 $featured_image_url = get_the_post_thumbnail_url();
 $image_position = get_field('image_position');
 $image_size = get_field('image_size');
+$caption = get_field('caption');
 $title_graphic = get_field('title_graphic');
 
 ?>
@@ -60,6 +61,11 @@ $title_graphic = get_field('title_graphic');
         <div class="hero__img">
             <div class="img" style="background-image:url('<?php echo (($hero_type === 'main-hero') || ($hero_type === 'page-banner')) ? $featured_image_url : $image; ?>'); background-position:<?php echo $image_position; ?>; background-size:cover;" ;></div>
             <div class="hero__accent-circle <?php echo $circle_color; ?>"></div>
+            <?php if ($caption) : ?>
+                <div class="hero__image-caption">
+                    <p>Photo Credit: <?php echo $caption; ?></p>
+                </div>
+            <?php endif; ?>
 
         </div>
 

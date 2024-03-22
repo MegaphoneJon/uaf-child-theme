@@ -27,7 +27,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-height: var(--hero-img-height)!important;
+    min-height: var(--hero-img-height) !important;
 
     .hero__title--main {
       margin-bottom: 50px;
@@ -117,8 +117,16 @@
     }
   }
 
-  //Layout Specific Adjustements
+  &__image-caption {
+    color: #1e1e1e !important;
+    bottom: 0 !important;
+    P {
+      font-size: clamp(9px, 0.8vw, 16px);
+      font-style: italic;
+    }
+  }
 
+  //Layout Specific Adjustements
 
   &.page-banner {
     border-bottom: none;
@@ -165,7 +173,6 @@
         }
       }
       .hero__img {
-     
         .img {
           bottom: 0;
           left: unset;
@@ -261,7 +268,6 @@
       }
     }
   }
- 
 }
 
 @media only screen and (max-width: 1000px) {
@@ -270,16 +276,14 @@
     .hero {
       &__content {
         flex-direction: column;
-        flex-basis: 90%!important;
+        flex-basis: 90% !important;
       }
       &__paragraph {
         flex: 0 1 90%;
-      
       }
       &__img {
         left: 25%;
       }
-
     }
     &.solutions__nested-hero {
       .hero__img {
@@ -308,7 +312,7 @@
         }
         &__img {
           transform: translateX(-50%);
-          left: 50%!important;
+          left: 50% !important;
           top: unset;
           bottom: -5vw;
           .img {
@@ -316,6 +320,15 @@
           }
           .hero__accent-circle {
             left: -20%;
+          }
+        }
+        &__image-caption {
+          display: block;
+          position: absolute;
+          bottom: 17% !important;
+          right: -73%;
+          p {
+            font-size: clamp (8px, 0.8vw, 16px);
           }
         }
       }
@@ -336,7 +349,7 @@
         text-align: left;
       }
       &__content {
-        padding-right: 0!important;
+        padding-right: 0 !important;
       }
     }
     h1 {
@@ -347,27 +360,25 @@
   .hero-block.nested-hero {
     padding-bottom: var(--hero-img-height);
     padding-top: 0;
-    .hero{
+    .hero {
       &__inner {
         padding-bottom: 0;
         width: 90%;
       }
       &__content {
-        padding: 0!important;
-
+        padding: 0 !important;
       }
       &__paragraph {
         text-align: left;
       }
       &__paragraph {
-        margin-bottom: 0!important;
+        margin-bottom: 0 !important;
         ul {
           text-align: left;
         }
       }
     }
   }
-
 }
 
 @media (min-width: 768px) {
