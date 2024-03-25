@@ -63,7 +63,7 @@ $title_graphic = get_field('title_graphic');
             <div class="hero__accent-circle <?php echo $circle_color; ?>"></div>
             <?php if ($caption) : ?>
                 <div class="hero__image-caption">
-                    <p>Photo Credit: <?php echo $caption; ?></p>
+                    <p>Credit: <?php echo $caption; ?></p>
                 </div>
             <?php endif; ?>
 

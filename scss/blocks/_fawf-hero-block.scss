@@ -118,10 +118,10 @@
   }
 
   &__image-caption {
-    color: #1e1e1e !important;
-    bottom: 0 !important;
+    bottom: -15px !important;
+    padding: 6px 33px 6px 20px;
     P {
-      font-size: clamp(9px, 0.8vw, 16px);
+      // font-size: clamp(9px, 0.8vw, 16px);
       font-style: italic;
     }
   }
@@ -186,6 +186,10 @@
     }
   }
 }
+
+.yellow-bg .hero__image-caption {
+  color: #1e1e1e;
+};
 
 //-----Tablet and Mobile Adjustments
 
@@ -325,11 +329,15 @@
         &__image-caption {
           display: block;
           position: absolute;
-          bottom: 17% !important;
-          right: -73%;
-          p {
-            font-size: clamp (8px, 0.8vw, 16px);
-          }
+          bottom: unset !important;
+          right: -75%;
+          top: calc(-5% - 17px);
+          color: var(--grey);
+          padding-right: 5px;
+          // transform: translateX(50%);
+          // p {
+          //   font-size: clamp (8px, 0.8vw, 16px);
+          // }
         }
       }
     }
