@@ -22,6 +22,7 @@ function fawf_theme_js()
     wp_enqueue_script('accordionJS', get_stylesheet_directory_uri() . '/js/accordion.js' , '', $curTime, true);
     wp_enqueue_script('accessibilityJS', get_stylesheet_directory_uri() . '/js/accessibility.js' , '', $curTime, true);
     wp_enqueue_script('main.js', get_stylesheet_directory_uri() . '/js/main.js' , '', $curTime, true);
+    wp_enqueue_script('stories.js', get_stylesheet_directory_uri() . '/js/stories.js' , '', $curTime, true);
 
 }
 
