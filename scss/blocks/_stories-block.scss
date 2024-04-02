@@ -92,7 +92,7 @@
         }
         &:hover {
           .story__link-title {
-            display: block;
+            opacity: 1;
           }
           .story__image {
             z-index: 0;
@@ -119,6 +119,7 @@
 
       &__link-title {
         font-size: 50px;
+        
         color: var(--black);
         position: absolute;
         transform: translate(-50%, -50%);
@@ -127,7 +128,13 @@
         top: 50%;
         left: 39%;
         z-index: 10;
-        display: none;
+        display: block;
+        opacity: 0;
+        text-align: center;
+        &.clamp-size {
+          font-size: clamp(18px, 2.8vw, 50px);
+          max-width: var(--image-width);
+        }
       }
 
       &:nth-child(even) {
@@ -201,20 +208,19 @@
         }
       }
     }
-  
-  &.overview {
-    .stories {
-      &__story-grid {
-        .story {
-          &__title {
-            margin-right: 64px;
+
+    &.overview {
+      .stories {
+        &__story-grid {
+          .story {
+            &__title {
+              margin-right: 64px;
+            }
           }
         }
       }
     }
-
   }
-}
 }
 
 @media screen and (max-width: 768px) {
