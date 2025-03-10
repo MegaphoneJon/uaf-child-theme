@@ -18,7 +18,7 @@ $caption = get_field('caption');
 $title_graphic = get_field('title_graphic');
 
 ?>
-<section class="hero hero-block <?php echo $hero_type; ?> <?php echo $bg_color; ?>-bg <?php echo $block['className']; ?>">
+<section class="hero hero-block <?php echo $hero_type; ?> <?php echo $bg_color; ?>-bg <?php echo $block['className'] ?? ''; ?>">
     <div class="hero__inner">
         <div class="hero__content">
             <?php if ($hero_type === 'main-hero') : ?>
